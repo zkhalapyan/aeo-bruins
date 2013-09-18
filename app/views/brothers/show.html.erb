@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @brother.name %>
+</p>
+
+<p>
+  <strong>Biography:</strong>
+  <%= @brother.biography %>
+</p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= image_tag @brother.avatar.url(:thumb) %>
+</p>
+
+<%= link_to 'Edit', edit_brother_path(@brother) %> |
+<%= link_to 'Back', brothers_path %>

@@ -1,5 +1,7 @@
 AeoBruins::Application.routes.draw do
 
+  resources :brothers
+
   get 'about' => 'about#show'
 
   # The priority is based upon order of creation: first created -> highest priority.

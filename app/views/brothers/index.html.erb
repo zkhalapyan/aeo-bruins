@@ -1,0 +1,29 @@
+<h1>Listing brothers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Biography</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @brothers.each do |brother| %>
+      <tr>
+        <td><%= brother.name %></td>
+        <td><%= brother.biography %></td>
+        <td><%= link_to 'Show', brother %></td>
+        <td><%= link_to 'Edit', edit_brother_path(brother) %></td>
+        <td><%= link_to 'Destroy', brother, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Brother', new_brother_path %>
