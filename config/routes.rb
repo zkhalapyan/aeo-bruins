@@ -1,9 +1,13 @@
 AeoBruins::Application.routes.draw do
+
+  resources :contacts, :only => [:new, :create]
+  resources :brothers
+
   root 'about#show'
 
   get 'about' => 'about#show'
 
-  resources :brothers
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

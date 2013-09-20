@@ -1,4 +1,4 @@
 <li class="<%= 'active' if params[:controller] == 'about' %>"><%= link_to "About", :about%></li>
 <li class="<%= 'active' if params[:controller] == 'brothers' %>"><%= link_to "Meet Our Brothers", :brothers %></li>
-<li><%= link_to "Contact Us" %></li>
+<li class="<%= 'active' if params[:controller] == 'contacts' %>"><%= link_to "Contact Us", :new_contact %></li>
 

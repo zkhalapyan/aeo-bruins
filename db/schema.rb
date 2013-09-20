@@ -25,4 +25,14 @@ ActiveRecord::Schema.define(version: 20130924040939) do
     t.string   "major"
   end
 
+  create_table "contacts", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "subject"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 end
