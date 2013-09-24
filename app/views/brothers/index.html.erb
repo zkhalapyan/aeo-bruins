@@ -1,29 +1,26 @@
-<h1>Listing brothers</h1>
+<h1>Brothers of Alpha Epsilon Omega - Beta Chapter</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Biography</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @brothers.each do |brother| %>
-      <tr>
-        <td><%= brother.name %></td>
-        <td><%= brother.biography %></td>
-        <td><%= link_to 'Show', brother %></td>
-        <td><%= link_to 'Edit', edit_brother_path(brother) %></td>
-        <td><%= link_to 'Destroy', brother, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<ul class="thumbnails">
 
-<br>
+  <% @brothers.each do |brother| %>
+  <li class="span5 clearfix">
+    <div class="thumbnail clearfix">
+      <%= image_tag brother.avatar.url(:medium), :alt=>brother.name, :class=>"pull-left span2 clearfix" %>
+
+      <div class="caption" class="pull-left">
+        <%= link_to 'Read Bio', brother, :class=>"btn btn-primary icon pull-right", :style => "color:white" %>
+        <h4>
+          <a href="#" ><%=brother.name %></a>
+        </h4>
+        <small><b>Major: </b>Computer Science and Engineering</small>
+
+
+      </div>
+    </div>
+  </li>
+  <% end %>
+</ul>
+
 
 <%= link_to 'New Brother', new_brother_path %>
