@@ -69,6 +69,6 @@ class BrothersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def brother_params
-      params.require(:brother).permit(:name, :biography, :avatar)
+      params.require(:brother).permit(:name, :major, :biography, :avatar)
     end
 end
