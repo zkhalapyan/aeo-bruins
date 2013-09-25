@@ -1,9 +1,10 @@
 AeoBruins::Application.routes.draw do
 
+  get "home/index"
   resources :contacts, :only => [:new, :create]
   resources :brothers
 
-  root 'about#show'
+  root 'home#index'
 
   get 'about' => 'about#show'
 

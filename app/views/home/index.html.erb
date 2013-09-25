@@ -1,0 +1,34 @@
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide">
+  <div class="carousel-inner">
+
+    <div class="item active">
+      <%= image_tag "home/carousel/ucla-bruin-bear-dark.jpg"%>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>The Armenian Fraternity.</h1>
+          <p class="lead">Alpha Epsilon Omega is the only Armenian Fraternity on Campus. Established in 2000,
+            the Beta chapter has a large network of alumni specialized in various fields.</p>
+          <%= link_to "Sign up today", new_contact_path, :class=>'btn btn-large btn-primary'%>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <%= image_tag "home/carousel/ucla-campus-dark.jpg"%>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Strive for Perfection.</h1>
+          <p class="lead">Our members are among the top students at UCLA. The Fraternity upholds high standards of
+            achievement in all aspects of life. </p>
+          <%= link_to "Sign up today", new_contact_path, :class=>'btn btn-large btn-primary'%>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div><!-- /.carousel -->
+

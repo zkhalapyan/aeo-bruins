@@ -1,3 +1,8 @@
+<li class="<%= 'active' if params[:controller] == 'home' %>">
+  <%= link_to :root do %>
+    <i class="icon-home icon-white"></i> Home
+  <% end %>
+</li>
 <li class="<%= 'active' if params[:controller] == 'about' %>"><%= link_to "About", :about%></li>
 <li class="<%= 'active' if params[:controller] == 'brothers' %>"><%= link_to "Meet Our Brothers", :brothers %></li>
 <li class="<%= 'active' if params[:controller] == 'contacts' %>"><%= link_to "Contact Us", :new_contact %></li>

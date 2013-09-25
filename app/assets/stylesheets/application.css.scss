@@ -12,9 +12,11 @@
  *= require_tree .
  */
 @import "bootstrap";
-body { padding-top: 60px; }
 @import "bootstrap-responsive";
-
+body {
+  padding-top: 60px;
+  color: #5a5a5a;
+}
 
 .center-me {
   float: none;

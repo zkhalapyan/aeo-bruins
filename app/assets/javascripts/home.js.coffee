@@ -1,0 +1,2 @@
+$.onload ->
+    $('#myCarousel').carousel()

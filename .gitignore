@@ -16,4 +16,7 @@
 /tmp
 
 # Ignore IDE files.
-.idea/*
+.idea/
+
+# Ignore Mac directory files.
+.DS_Store
