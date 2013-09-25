@@ -19,9 +19,10 @@ test:
   timeout: 5000
 
 production:
+  host: ec2-54-221-236-207.compute-1.amazonaws.com
   adapter: postgresql
   encoding: unicode
-  database: aeo_bruins_produdction
+  database: d4mls5gpm529gd
   pool: 5
-  username: aeo_bruins
-  password:
+  username: qzlorwqkpubwzg
+  password: nL0vH0xpeOeleXGPAspSc9_dOF
