@@ -1,7 +1,5 @@
-/* CUSTOMIZE THE CAROUSEL
+/* CAROUSEL CSS
 -------------------------------------------------- */
-
-/* Carousel base class */
 .carousel {
   margin-bottom: 60px;
 
@@ -21,7 +19,6 @@
     min-width: 100%;
     height: 500px;
   }
-
 }
 
 .carousel-control {
@@ -55,7 +52,7 @@
   }
 }
 
-/* RESPONSIVE CSS
+/* CAROUSEL - RESPONSIVE CSS
 -------------------------------------------------- */
 
 @media (max-width: 979px) {
@@ -100,5 +97,45 @@
     .btn {
       font-size: 18px;
     }
+  }
+}
+
+@media (max-width: 500px)  {
+  .carousel-caption {
+    margin-left: 5px;
+    h1 {
+      font-size: 25px;
+    }
+    .lead,
+    .btn {
+      font-size: 12px;
+    }
+
+    .btn {
+      padding: 3px 6px;
+    }
+  }
+}
+
+/* MARKETING CSS
+-------------------------------------------------- */
+/* Center align the text within the three columns below the carousel */
+.marketing {
+  .span4 {
+    text-align: center;
+  }
+
+  h2 {
+    font-weight: normal;
+  }
+
+  .span4 p {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  img {
+    height: 246.5px;
+    width: 370px;
   }
 }
