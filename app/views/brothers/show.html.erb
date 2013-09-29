@@ -1,19 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @brother.name %>
-</p>
 
-<p>
-  <strong>Biography:</strong>
-  <%= @brother.biography %>
-</p>
+<div class='row'>
+  <div class='span3 offset1'>
+      <%= image_tag @brother.avatar.url %>
+  </div>
 
-<p>
-  <strong>Avatar:</strong>
-  <%= image_tag @brother.avatar.url(:thumb) %>
-</p>
+
+  <div class='span3'>
+
+    <div class='row'>
+      <p>
+        <strong>Name:</strong>
+        <%= @brother.name %>
+      </p>
+    </div>
+
+
+    <div class='row'>
+      <p>
+        <strong>Biography:</strong>
+        <%= @brother.biography %>
+      </p>
+    </div>
+
+
+  </div>
+
+</div>
+
 
 <%= link_to 'Edit', edit_brother_path(@brother) %> |
 <%= link_to 'Back', brothers_path %>
