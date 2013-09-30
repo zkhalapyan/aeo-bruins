@@ -14,8 +14,9 @@
               <i class="icon-home icon-white"></i> Home
             <% end %>
           </li>
-          <li class="<%= 'active' if params[:controller] == 'about' %>"><%= link_to "About", :about%></li>
-          <li class="<%= 'active' if params[:controller] == 'brothers' %>"><%= link_to "Meet Our Brothers", :brothers %></li>
+          <li class="<%= 'active' if params[:controller] == 'about' %>"><%= link_to "Our History", :about%></li>
+          <li class="<%= 'active' if params[:controller] == 'brothers' %>"><%= link_to "Meet the Brothers",
+                                                                                       :brothers %></li>
           <li class="<%= 'active' if params[:controller] == 'contacts' %>"><%= link_to "Contact Us", :new_contact %></li>
         </ul>
       </div><!-- /.nav-collapse -->
