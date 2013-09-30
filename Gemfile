@@ -58,6 +58,12 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Paperclip is intended as an easy file attachment library for Active Record. The intent behind it was to keep setup
+# as easy as possible and to treat files as much like other attributes as possible.
 gem 'paperclip'
 
+# Use AWS SDK for storing files in S3.
+gem 'aws-sdk'
+
 gem 'protected_attributes'
+
