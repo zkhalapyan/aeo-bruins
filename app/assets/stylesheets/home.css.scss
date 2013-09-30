@@ -139,3 +139,35 @@
     width: 370px;
   }
 }
+
+
+/* FEATURETTE - PROMO VIDEO CSS
+------------------------- */
+
+.featurette {
+  /* Vertically center images part 1: add padding above and below text. */
+  padding-top: 120px;
+
+  /* Vertically center images part 2: clear their floats. */
+  overflow: hidden;
+}
+
+/* Give some space on the sides of the floated elements so text doesn't run right into it. */
+.featurette-media {
+  /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+  margin-top: -50px;
+  .pull-left {
+    margin-right: 40px;
+  }
+  .pull-right {
+    margin-left: 40px;
+  }
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
