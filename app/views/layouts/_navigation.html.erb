@@ -1,9 +1,24 @@
-<li class="<%= 'active' if params[:controller] == 'home' %>">
-  <%= link_to :root do %>
-    <i class="icon-home icon-white"></i> Home
-  <% end %>
-</li>
-<li class="<%= 'active' if params[:controller] == 'about' %>"><%= link_to "About", :about%></li>
-<li class="<%= 'active' if params[:controller] == 'brothers' %>"><%= link_to "Meet Our Brothers", :brothers %></li>
-<li class="<%= 'active' if params[:controller] == 'contacts' %>"><%= link_to "Contact Us", :new_contact %></li>
-
+<div class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <%= link_to "AEO Bruins", root_path, { :class => "brand" } %>
+      <div class="nav-collapse">
+        <ul class="nav pull-right">
+          <li class="<%= 'active' if params[:controller] == 'home' %>">
+            <%= link_to :root do %>
+              <i class="icon-home icon-white"></i> Home
+            <% end %>
+          </li>
+          <li class="<%= 'active' if params[:controller] == 'about' %>"><%= link_to "About", :about%></li>
+          <li class="<%= 'active' if params[:controller] == 'brothers' %>"><%= link_to "Meet Our Brothers", :brothers %></li>
+          <li class="<%= 'active' if params[:controller] == 'contacts' %>"><%= link_to "Contact Us", :new_contact %></li>
+        </ul>
+      </div><!-- /.nav-collapse -->
+    </div><!-- /.container -->
+  </div><!-- /.navbar-inner -->
+</div><!-- /.navbar -->
