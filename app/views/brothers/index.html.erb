@@ -1,24 +1,22 @@
 <div class='row'>
+  <div class='span9 center-me'>
 
-  <div class='span10 center-me'>
-    <ul class="thumbnails">
       <% @brothers.each do |brother| %>
-        <li class="span5 clearfix">
-          <div class="thumbnail clearfix">
-            <%= image_tag brother.avatar.url(:medium), :alt=>brother.name, :class=>"pull-left span2 clearfix" %>
-            <div class="caption" class="pull-left">
-              <%= link_to 'Read Bio', brother, :class=>"btn btn-primary icon pull-right", :style => "color:white" %>
-              <h4>
-                <%=brother.name %>
-              </h4>
-              <small><b>Major: </b><%=brother.major %></small>
-            </div>
+        <div class="row brother-details">
+          <div class='span3'>
+            <%= image_tag brother.avatar.url(:medium), :alt=>brother.name %>
           </div>
-        </li>
-      <% end %>
-    </ul>
-  </div>
+          <div class='span6'>
+            <h3><%=brother.name %></h3>
 
+            <h4><%=brother.major %></h4>
+
+            <p><%=brother.biography %></p>
+          </div>
+        </div>
+      <% end %>
+
+  </div>
 </div>
 
 <div class='row'>
