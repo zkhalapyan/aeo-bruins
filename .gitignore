@@ -21,6 +21,3 @@
 # Ignore Mac directory files.
 .DS_Store
 
-# Ignore public rails assets.
-public/assets/**
-
