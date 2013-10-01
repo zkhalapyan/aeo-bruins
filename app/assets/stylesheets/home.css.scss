@@ -54,7 +54,6 @@
 
 /* CAROUSEL - RESPONSIVE CSS
 -------------------------------------------------- */
-
 @media (max-width: 979px) {
   .carousel
   {
@@ -119,7 +118,6 @@
 
 /* MARKETING CSS
 -------------------------------------------------- */
-/* Center align the text within the three columns below the carousel */
 .marketing {
   .span4 {
     text-align: center;
@@ -140,34 +138,44 @@
   }
 }
 
-
-/* FEATURETTE - PROMO VIDEO CSS
+/* PROMO VIDEO CSS
 ------------------------- */
-
-.featurette {
-  /* Vertically center images part 1: add padding above and below text. */
-  padding-top: 120px;
-
-  /* Vertically center images part 2: clear their floats. */
+.flex-video {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
+  height: 0;
+  margin-bottom: 16px;
   overflow: hidden;
 }
 
-/* Give some space on the sides of the floated elements so text doesn't run right into it. */
-.featurette-media {
-  /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
-  margin-top: -50px;
-  .pull-left {
-    margin-right: 40px;
-  }
-  .pull-right {
-    margin-left: 40px;
-  }
+.flex-video.widescreen { padding-bottom: 57.25%; }
+.flex-video.vimeo { padding-top: 0; }
+
+.flex-video iframe,
+.flex-video object,
+.flex-video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-/* Thin out the marketing headings */
-.featurette-heading {
+.home-divider {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.promo-heading {
   font-size: 50px;
   font-weight: 300;
   line-height: 1;
   letter-spacing: -1px;
+}
+
+/* PROMO VIDEO - RESPONSIVE CSS
+------------------------- */
+@media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px) {
+  .flex-video { padding-top: 0; }
 }
