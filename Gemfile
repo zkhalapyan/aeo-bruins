@@ -16,6 +16,8 @@ group :production do
   # for to run a Rails 4 application on a twelve-factor provider. Gem required for HEROKU!
   gem 'rails_12factor'
 
+  # Fast Google Analytics setup for Rails 3.
+  gem 'google-analytics-rails'
 end
 
 # Use SCSS for stylesheets

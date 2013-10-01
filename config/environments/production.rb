@@ -88,4 +88,7 @@ AeoBruins::Application.configure do
       :url =>':s3_domain_url',
       :path => '/:class/:attachment/:id_partition/:style/:filename',
   }
+
+  # Google Analytics account ID.
+  GA.tracker = 'UA-44498247-1'
 end
