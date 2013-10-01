@@ -1,21 +1,9 @@
 <div class='row'>
   <div class='span9 center-me'>
-
       <% @brothers.each do |brother| %>
-        <div class="row brother-details">
-          <div class='span3'>
-            <%= image_tag brother.avatar.url(:medium), :alt=>brother.name %>
-          </div>
-          <div class='span6'>
-            <h3><%=brother.name %></h3>
-
-            <h4><%=brother.major %></h4>
-
-            <p><%=brother.biography %></p>
-          </div>
-        </div>
+        <%= render :partial => "details", :locals => {:brother => brother} %>
+        <br />
       <% end %>
-
   </div>
 </div>
 

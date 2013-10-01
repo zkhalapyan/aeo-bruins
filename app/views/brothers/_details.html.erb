@@ -1,0 +1,14 @@
+<div class="row brother-details">
+  <div class='span3'>
+    <%= image_tag brother.avatar.url(:medium), :alt=>brother.name %>
+  </div>
+  <div class='span6'>
+    <h3><%=brother.name %></h3>
+
+    <h4><%=brother.major %></h4>
+
+    <p><%=brother.biography %></p>
+
+    <%= link_to 'Edit', edit_brother_path(brother) %>
+  </div>
+</div>

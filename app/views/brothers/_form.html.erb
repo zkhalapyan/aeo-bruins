@@ -1,34 +1,35 @@
-<%= form_for(@brother, :html => { :multipart => true }) do |f| %>
-  <% if @brother.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@brother.errors.count, "error") %> prohibited this brother from being saved:</h2>
+<% if @brother.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@brother.errors.count, "error") %> prohibited this brother from being saved:</h2>
 
-      <ul>
+    <ul>
       <% @brother.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
-      </ul>
+    </ul>
+  </div>
+<% end %>
+
+
+<%= form_for(@brother, :html => { :multipart => true, :class=>"well span8 center-me brother-form" }) do |f| %>
+  <div class="row">
+
+    <div class="span3">
+      <%= f.label :name %>
+      <%= f.text_field :name, :class=>'span3', :placeholder=>'Your Name' %>
+      <%= f.label :major %>
+      <%= f.text_field :major, :class=>'span3', :placeholder=>'Your Major' %>
+      <%= f.label :avatar %>
+      <%= f.file_field :avatar %>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
+    <div class="span5">
+      <%= f.label :biography %>
+      <%= f.text_area :biography, :class=>'input-xlarge span5', :rows=>10%>
+    </div>
 
-  <div class="field">
-    <%= f.label :major %><br>
-    <%= f.text_field :major %>
-  </div>
+    <%= f.submit :value=>'Publish', :class=>'btn btn-primary pull-right'%>
+    <%= link_to 'Cancel',brothers_path, :class=>'btn btn-primary pull-right'%>
 
-  <div class="field">
-    <%= f.label :biography %><br>
-    <%= f.text_area :biography %>
-  </div>
-
-  <%= f.file_field :avatar %>
-
-  <div class="actions">
-    <%= f.submit %>
   </div>
 <% end %>
