@@ -21,3 +21,6 @@
 # Ignore Mac directory files.
 .DS_Store
 
+# Ignore local brother avatars.
+public/system/brothers/**
+
