@@ -13,6 +13,9 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
+        # Send an email only when in production.
+        ContactMailer.contact_email(@contact).deliver if Rails.env.production?
+
         format.html { redirect_to '/', notice: 'Contact was successfully created.' }
         format.json { render json: 'Contact Created', status: created }
       else
